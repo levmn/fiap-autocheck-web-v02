@@ -1,8 +1,16 @@
+import { Suspense } from "react"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from "./pages/Home/Home"
+
 function App() {
   return (
-    <div>
-      <h1>AutoCheck</h1>
-    </div>
+    <BrowserRouter>
+      <Suspense fallback={<>Carregando...</>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
   )
 }
 
