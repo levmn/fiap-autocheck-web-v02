@@ -1,4 +1,4 @@
-import { StyledButton, StyledDiv, StyledList, StyledListItem, StyledLogo, StyledNavbar } from "./Navbar.style";
+import { StyledButtonUnlogged, StyledButtonLogged, StyledDiv, StyledList, StyledListItem, StyledLogo, StyledNavbar } from "./Navbar.style";
 import Logo from "../../assets/images/autocheck-azul.png";
 import { Link } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
@@ -19,10 +19,10 @@ export const NavbarUnlogged = () => {
                 </StyledList>
             </StyledDiv>
 
-            <StyledButton href="">
+            <StyledButtonUnlogged href="">
                 <FaRegUserCircle color="1696db" id="user" />
                 <p>Entrar</p>
-            </StyledButton>
+            </StyledButtonUnlogged>
         </StyledNavbar>
     );
 };
@@ -42,9 +42,9 @@ export const NavbarLogged = () => {
                 </StyledList>
             </StyledDiv>
 
-            <StyledButton href="">
+            <StyledButtonLogged href="">
                 <FaRegUserCircle color="1696db" id="user" />
-            </StyledButton>
+            </StyledButtonLogged>
         </StyledNavbar>
     )
 }

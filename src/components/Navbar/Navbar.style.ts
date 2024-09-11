@@ -108,7 +108,7 @@ export const StyledListItem = styled.li`
     }
 `;
 
-export const StyledButton = styled.a`
+export const StyledButtonUnlogged = styled.a`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -203,6 +203,113 @@ export const StyledButton = styled.a`
 
     @media (min-width: 1200px) {
         width: 130px;
+        height: 50px;
+
+        & #user {
+            width: 35px;
+            height: 35px;
+        }
+
+        & p {
+            font-size: 1.2rem;
+            margin-left: 10px;
+
+        }
+    }
+`;
+
+export const StyledButtonLogged = styled.a`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 130px;
+    text-decoration: none;
+    margin: 10px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #d6f1f8;
+        transition: 0.5s;
+    }
+
+    & #user {
+        width: 35px;
+        height: 35px;
+    }
+
+    & p {
+        color: #0f5a6c;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: center;
+        margin-left: 15px;
+    }
+
+    /* Media Queries */
+    @media (max-width: 575px) {
+        width: 60px;
+        height: 45px;
+
+        & #user {
+            width: 30px;
+            height: 30px;
+        }
+
+        & p {
+            font-size: 0.9rem;
+            margin-left: 10px;
+
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        width: 60px;
+        height: 45px;
+
+        & #user {
+            width: 30px;
+            height: 30px;
+        }
+
+        & p {
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        width: 60px;
+        height: 45px;
+
+        & #user {
+            width: 30px;
+            height: 30px;
+        }
+
+        & p {
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        width: 65px;
+        height: 50px;
+
+        & #user {
+            width: 35px;
+            height: 35px;
+        }
+
+        & p {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        width: 65px;
         height: 50px;
 
         & #user {
