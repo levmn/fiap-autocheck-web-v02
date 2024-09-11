@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledTitle = styled.h1`
+    font-size: 35px;
     color: #3AC0E1;
     margin-bottom: 0;
 `;
@@ -12,7 +13,6 @@ export const StyledSubTitle = styled.p`
 
 export const StyledForm = styled.form`
     & input {
-    font-family: "Rubik", Arial, Helvetica, sans-serif;
     width: 100%;
     margin-bottom: 20px;
     padding: 10px 15px;
@@ -40,7 +40,6 @@ export const StyledForm = styled.form`
     }
 
     & .button-enviar a {
-    font-family: "Rubik", Arial, Helvetica, sans-serif;
     font-size: 1rem;
     font-weight: 700;
     color: #000000;

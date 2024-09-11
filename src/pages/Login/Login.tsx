@@ -3,6 +3,7 @@ import { Footer } from "../../components/Footer/Footer";
 import { NavbarLogged } from "../../components/Navbar/Navbar";
 import { StyledForm, StyledRegister, StyledSubTitle, StyledTitle } from "./Login.style";
 import { IoIosArrowBack } from "react-icons/io";
+import { Layout } from "../../components/Layout/Layout";
 
 
 export default function Login() {
@@ -10,26 +11,28 @@ export default function Login() {
         <>
             <NavbarLogged />
 
-            <Link to={"/"}>
-                <IoIosArrowBack size={60} color="black"/>
-            </Link>
+            <Layout>
+                <Link to={"/"}>
+                    <IoIosArrowBack size={60} color="black" />
+                </Link>
 
-            <StyledTitle className="titulo-pagina">Acessar Conta</StyledTitle>
-            <StyledSubTitle className="descricao-pagina">Preencha seus dados para continuar</StyledSubTitle>
+                <StyledTitle>Acessar Conta</StyledTitle>
+                <StyledSubTitle>Preencha seus dados para continuar</StyledSubTitle>
 
-            <StyledForm action="" method="post" className="formulario">
-                <input type="text" name="login" id="login" placeholder="E-mail ou CPF" />
-                <input type="password" name="senha" id="senha" placeholder="Senha" />
-                <div>
-                    <a href="" className="lembrar-senha">Esqueci a minha senha</a>
-                    <button type="submit" className="button-enviar"><a href="./cadastro-veiculo.html">Entrar</a></button>
-                </div>
-            </StyledForm>
+                <StyledForm action="" method="post">
+                    <input type="text" name="login" id="login" placeholder="E-mail ou CPF" />
+                    <input type="password" name="senha" id="senha" placeholder="Senha" />
+                    <div>
+                        <a href="">Esqueci a minha senha</a>
+                        <button type="submit" className="button-enviar"><a href="">Entrar</a></button>
+                    </div>
+                </StyledForm>
 
-            <StyledRegister>
-                <p>Não tem uma conta na AutoCheck?</p>
-                <a href="./cadastro.html">Crie seu cadastro!</a>
-            </StyledRegister>
+                <StyledRegister>
+                    <p>Não tem uma conta na AutoCheck?</p>
+                    <a href="">Crie seu cadastro!</a>
+                </StyledRegister>
+            </Layout>
 
             <Footer />
         </>
