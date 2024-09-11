@@ -18,14 +18,14 @@ export default function Registration() {
             <StyledTitle>Cadastrar Conta</StyledTitle>
             <StyledSubTitle>Preencha seus dados para continuar</StyledSubTitle>
 
-            <StyledForm action="" method="post" className="formulario">
+            <StyledForm action="" method="post">
                 <input type="text" name="nome" id="nome" placeholder="Nome completo" />
                 <input type="text" name="cpf" id="cpf" placeholder="CPF" />
                 <input type="text" name="email" id="email" placeholder="E-mail" />
                 <input type="password" name="senha" id="senha" placeholder="Senha" />
                 <input type="password" name="confirmar-senha" id="confirmar-senha" placeholder="Confirmar senha" />
                 <div>
-                    <button type="submit" className="button-enviar"><a href="./cadastro-veiculo.html">Cadastrar</a></button>
+                    <button type="submit" className="button-enviar"><a href="">Cadastrar</a></button>
                 </div>
             </StyledForm>
             </Layout>
