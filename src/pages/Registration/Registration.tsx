@@ -30,7 +30,7 @@ export default function Registration() {
             </StyledForm>
             </Layout>
 
-            <Footer></Footer>
+            <Footer />
         </>
     )
 }
