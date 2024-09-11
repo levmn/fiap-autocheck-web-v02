@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 
 const LazyHome = lazy(() => import('./pages/Home/Home'))
 const LazyLogin = lazy(() => import('./pages/Login/Login'))
+const LazyRegistration = lazy(() => import('./pages/Registration/Registration'))
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LazyHome />} />
           <Route path="/login" element={<LazyLogin />} />
+          <Route path="cadastro" element={<LazyRegistration />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
