@@ -20,7 +20,7 @@ export const Navbar = () => {
             </StyledDiv>
 
             <StyledButton href="">
-                <FaRegUserCircle color="1696DB" id="user" />
+                <FaRegUserCircle color="1696db" id="user" />
                 <p>Entrar</p>
             </StyledButton>
         </StyledNavbar>
