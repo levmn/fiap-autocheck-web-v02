@@ -129,7 +129,6 @@ export const StyledButton = styled.a`
     & #user {
         width: 35px;
         height: 35px;
-        margin-right: 15px;
     }
 
     & p {
@@ -137,6 +136,7 @@ export const StyledButton = styled.a`
         font-size: 1.2rem;
         font-weight: 500;
         text-align: center;
+        margin-left: 15px;
     }
 
     /* Media Queries */
@@ -147,11 +147,12 @@ export const StyledButton = styled.a`
         & #user {
             width: 30px;
             height: 30px;
-            margin-right: 10px;
         }
 
         & p {
             font-size: 0.9rem;
+            margin-left: 10px;
+
         }
     }
 
@@ -162,11 +163,11 @@ export const StyledButton = styled.a`
         & #user {
             width: 30px;
             height: 30px;
-            margin-right: 10px;
         }
 
         & p {
             font-size: 0.9rem;
+            margin-left: 10px;
         }
     }
 
@@ -177,11 +178,11 @@ export const StyledButton = styled.a`
         & #user {
             width: 30px;
             height: 30px;
-            margin-right: 10px;
         }
 
         & p {
             font-size: 1.2rem;
+            margin-left: 10px;
         }
     }
 
@@ -192,11 +193,11 @@ export const StyledButton = styled.a`
         & #user {
             width: 35px;
             height: 35px;
-            margin-right: 10px;
         }
 
         & p {
             font-size: 1.2rem;
+            margin-right: 10px;
         }
     }
 
@@ -207,11 +208,12 @@ export const StyledButton = styled.a`
         & #user {
             width: 35px;
             height: 35px;
-            margin-right: 10px;
         }
 
         & p {
             font-size: 1.2rem;
+            margin-left: 10px;
+
         }
     }
 `;
