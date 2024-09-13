@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Footer } from "../../components/Footer/Footer";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { StyledForm, StyledRegister, StyledSubTitle, StyledTitle } from "./Login.style";
@@ -10,15 +10,18 @@ import { useState } from "react";
 
 export default function Login() {
 
+    const navigate = useNavigate();
+
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [logged, setLogged] = useState<boolean>(false)
 
     const validarEmailOuCPF = (input: string): boolean => {
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         const regexCPF = /^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$/;
         return regexEmail.test(input) || regexCPF.test(input);
-      };
-      
+    };
+
     const validarSenha = (senha: string): boolean => {
         return senha.length >= 8;
     };
@@ -35,6 +38,10 @@ export default function Login() {
         }
 
         console.log("Login bem-sucedido!");
+        setUsername('')
+        setPassword('')
+        setLogged(true)
+        navigate('/', { state: { logged: true } })
     }
 
     return (
@@ -68,7 +75,7 @@ export default function Login() {
                     />
 
                     <div>
-                        <a href="">Esqueci a minha senha</a>
+                        <Link to={"/"} className="lembrar-senha">Esqueci a minha senha</Link>
                         <Button type="button" onClick={handleClick}>
                             Entrar
                         </Button>
@@ -77,7 +84,7 @@ export default function Login() {
 
                 <StyledRegister>
                     <p>Não tem uma conta na AutoCheck?</p>
-                    <a href="">Crie seu cadastro!</a>
+                    <Link to={"/cadastro"}>Crie seu cadastro!</Link>
                 </StyledRegister>
             </Layout>
 

@@ -28,21 +28,9 @@ export const StyledForm = styled.form`
     }
 
     & .lembrar-senha {
+    font-size: 12px;
     text-decoration: underline;
     color: gray;
-    }
-
-    & .button-enviar {
-    background-color: #3ac0e1;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 8px;
-    }
-
-    & .button-enviar a {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #000000;
     }
 `;
 

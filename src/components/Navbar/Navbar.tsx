@@ -7,7 +7,6 @@ interface NavbarProps {
     type: string;
 }
 
-
 export const Navbar = ({ type }: NavbarProps) => {
     return (
         <StyledNavbar>
@@ -18,22 +17,25 @@ export const Navbar = ({ type }: NavbarProps) => {
 
                 <StyledList>
                     <StyledListItem>
-                        <Link to="https://www.portoseguro.com.br/centros-automotivos-porto-seguro">Parceria Porto
+                        <Link to="https://www.portoseguro.com.br/centros-automotivos-porto-seguro">
+                        Parceria Porto
                         </Link>
                     </StyledListItem>
                 </StyledList>
             </StyledDiv>
             {type === 'deslogado'
-                ? 
+                ?
                 (
-                    <StyledButtonUnlogged href="">
-                        <FaRegUserCircle color="1696db" id="user" />
-                        <p>Entrar</p>
-                    </StyledButtonUnlogged>
+                    <Link to={"/login"}>
+                        <StyledButtonUnlogged>
+                            <FaRegUserCircle color="1696db" id="user" />
+                            <p>Entrar</p>
+                        </StyledButtonUnlogged>
+                    </Link>
                 )
-                : 
+                :
                 (
-                    <StyledButtonLogged href="">
+                    <StyledButtonLogged>
                         <FaRegUserCircle color="1696db" id="user" />
                     </StyledButtonLogged>
                 )
