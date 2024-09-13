@@ -3,7 +3,12 @@ import Logo from "../../assets/images/autocheck-azul.png";
 import { Link } from "react-router-dom";
 import { FaRegUserCircle } from "react-icons/fa";
 
-export const NavbarUnlogged = () => {
+interface NavbarProps {
+    type: string;
+}
+
+
+export const Navbar = ({ type }: NavbarProps) => {
     return (
         <StyledNavbar>
             <StyledDiv>
@@ -18,33 +23,21 @@ export const NavbarUnlogged = () => {
                     </StyledListItem>
                 </StyledList>
             </StyledDiv>
-
-            <StyledButtonUnlogged href="">
-                <FaRegUserCircle color="1696db" id="user" />
-                <p>Entrar</p>
-            </StyledButtonUnlogged>
+            {type === 'deslogado'
+                ? 
+                (
+                    <StyledButtonUnlogged href="">
+                        <FaRegUserCircle color="1696db" id="user" />
+                        <p>Entrar</p>
+                    </StyledButtonUnlogged>
+                )
+                : 
+                (
+                    <StyledButtonLogged href="">
+                        <FaRegUserCircle color="1696db" id="user" />
+                    </StyledButtonLogged>
+                )
+            }
         </StyledNavbar>
     );
 };
-
-export const NavbarLogged = () => {
-    return (
-        <StyledNavbar>
-            <StyledDiv>
-                <Link to="">
-                    <StyledLogo src={Logo} alt="Logotipo Autocheck" />
-                </Link>
-                <StyledList>
-                    <StyledListItem>
-                        <Link to="https://www.portoseguro.com.br/centros-automotivos-porto-seguro">Parceria Porto
-                        </Link>
-                    </StyledListItem>
-                </StyledList>
-            </StyledDiv>
-
-            <StyledButtonLogged href="">
-                <FaRegUserCircle color="1696db" id="user" />
-            </StyledButtonLogged>
-        </StyledNavbar>
-    )
-}

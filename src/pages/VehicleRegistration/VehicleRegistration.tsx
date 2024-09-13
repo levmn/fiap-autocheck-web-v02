@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import { Footer } from "../../components/Footer/Footer";
 import { Layout } from "../../components/Layout/Layout";
-import { NavbarLogged } from "../../components/Navbar/Navbar";
+import { Navbar } from "../../components/Navbar/Navbar";
 import { IoIosArrowBack } from "react-icons/io";
 import { StyledForm, StyledSubTitle, StyledTitle } from "./VehicleRegistration.style";
 
 export default function VehicleRegistration() {
     return (
         <>
-            <NavbarLogged />
+            <Navbar type="logged" />
 
             <Layout>
                 <Link to={"/"}>
