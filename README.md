@@ -1,50 +1,45 @@
-# React + TypeScript + Vite
+# AutoCheck 🚗🔧
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AutoCheck é uma aplicação web desenvolvida em parceria com a **Porto Seguro**, com o objetivo de oferecer uma interface intuitiva e responsiva para facilitar o diagnóstico mecânico de veículos. A aplicação permite que os usuários realizem o cadastro pessoal, o cadastro do veículo e gerem um diagnóstico a partir de um código de falha. Além disso, os usuários podem obter orçamentos e agendar serviços com o CAPS (Centro Automotivo Porto Seguro) mais próximo.
 
-Currently, two official plugins are available:
+Este projeto foi desenvolvido por alunos da turma **1TDSPX** da **FIAP**, como parte do **Challenge** em parceria com a **Porto Seguro**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Funcionalidades
 
-## Expanding the ESLint configuration
+- Cadastro de usuário
+- Cadastro de veículo
+- Geração de diagnóstico mecânico através de código de falha
+- Obtenção de orçamento e agendamento com o CAPS mais próximo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚀 Tecnologias Utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- **TypeScript**
+- **Vite**
+- **React**
+- **HTML5**
+- **CSS3**
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## 📦 Como Instalar e Rodar o Projeto
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Siga os passos abaixo para rodar a aplicação localmente em sua máquina:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Clone o repositório**:<br>
+   ```git clone https://github.com/seu-usuario/fiap-autocheck-web.git```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. **Navegue até o diretório do projeto**:<br>
+  ```cd fiap-autocheck-web```
+
+3. **Instale as dependências**:<br>
+  ```npm install```
+
+4. **Inicie o servidor de desenvolvimento**:<br>
+  ```npm run dev```
+
+5. **Acesse `http://localhost:5173` para visualizar o projeto.**
+
+## 👨‍💻 Equipe de Desenvolvimento
+Este projeto foi desenvolvido pelos seguintes alunos da FIAP:
+
+Allan Brito Moreira - RM558948<br>
+Caio Liang - RM558868<br>
+Levi Magni - RM98276
