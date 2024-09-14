@@ -5,7 +5,11 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import imgServico1 from "../../assets/images/imagem-servico1.jpg";
 import imgServico2 from "../../assets/images/imagem-servico2.jpg";
 import imgServico3 from "../../assets/images/imagem-servico3.jpg";
-import { StyledButton, StyledButtonAdquirirServico, StyledButtonSaibaMais, StyledContainer, StyledHome, StyledServicos, StyledServicosCards } from "./Home.style";
+import fotoAllan from "../../assets/images/allan.png";
+import fotoCaio from "../../assets/images/caio.png";
+import fotoLevi from "../../assets/images/levi.png";
+import { StyledButton, StyledButtonAdquirirServico, StyledButtonSaibaMais, StyledContainer, StyledHome, StyledIntegrantes, StyledIntegrantesCards, StyledServicos, StyledServicosCards } from "./Home.style";
+import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
 
@@ -70,6 +74,39 @@ export default function Home() {
           </article>
         </StyledServicosCards>
       </StyledServicos>
+
+      <StyledIntegrantes className="section-time">
+        <h2>Time AutoCheck</h2>
+        <p>Somos o time que idealizou e construiu a solução <b>AutoCheck</b> para ser integrada com a <b>Porto
+          Seguro</b>. Alunos da FIAP, da turma 1TDSPX.</p>
+
+        <StyledIntegrantesCards>
+          <article>
+            <img src={fotoAllan} alt="Foto do Allan" />
+            <h3>Allan Brito</h3>
+            <span>RM558948</span>
+            <a href="https://github.com/Allanbm100" target="_blank">
+              <FaGithub color="#0f5a6c" size="25px" />
+            </a>
+          </article>
+          <article>
+            <img src={fotoCaio} alt="Foto do Caio" />
+            <h3>Caio Liang</h3>
+            <span>RM558868</span>
+            <a href="https://github.com/CaioLiang" target="_blank">
+              <FaGithub color="#0f5a6c" size="25px" />
+            </a>
+          </article>
+          <article>
+            <img src={fotoLevi} alt="Foto do Levi" />
+            <h3>Levi Magni</h3>
+            <span>RM98276</span>
+            <a href="https://github.com/levmn" target="_blank">
+              <FaGithub color="#0f5a6c" size="25px" />
+            </a>
+          </article>
+        </StyledIntegrantesCards>
+      </StyledIntegrantes>
 
       <Footer />
     </>

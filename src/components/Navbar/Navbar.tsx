@@ -11,14 +11,14 @@ export const Navbar = ({ type }: NavbarProps) => {
     return (
         <StyledNavbar>
             <StyledDiv>
-                <Link to="">
+                <Link to="/">
                     <StyledLogo src={Logo} alt="Logotipo Autocheck" />
                 </Link>
 
                 <StyledList>
                     <StyledListItem>
-                        <Link to="https://www.portoseguro.com.br/centros-automotivos-porto-seguro">
-                        Parceria Porto
+                        <Link to="https://www.portoseguro.com.br/centros-automotivos-porto-seguro" target="_blank">
+                            Parceria Porto
                         </Link>
                     </StyledListItem>
                 </StyledList>

@@ -161,3 +161,63 @@ export const StyledServicosCards = styled.div`
         }
     }
 `;
+
+// Sessão de integrantes
+export const StyledIntegrantes = styled.section`
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+    background-color: #EFF4FF;
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #0f5a6c;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    p {
+        width: 80vw;
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #0f5a6c;
+        text-align: center;
+    }
+`;
+
+export const StyledIntegrantesCards = styled.div`
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 40px;
+    margin-bottom: 40px;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        img {
+            border: 5px solid #3AC0E1;
+            border-radius: 50%;
+            width: 240px;
+            height: 240px;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0f5a6c;
+        }
+
+        span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #0f5a6c;
+        }
+    }
+`;
