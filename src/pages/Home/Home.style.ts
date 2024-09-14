@@ -94,7 +94,9 @@ export const StyledButtonAdquirirServico = styled.button`
     }
 `;
 
+// Sessão de serviços
 export const StyledServicos = styled.section`
+    width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,15 +105,18 @@ export const StyledServicos = styled.section`
     background-color: #FFFFFF;
 
     h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #000000;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #0f5a6c;
+        text-align: center;
+        margin-top: 40px;
     }
 
     p {
-        font-size: 1.5rem;
+        width: 80vw;
+        font-size: 1.2rem;
         font-weight: 400;
-        color: #000000;
+        color: #0f5a6c;
         text-align: center;
     }
 `;
@@ -119,8 +124,7 @@ export const StyledServicos = styled.section`
 export const StyledServicosCards = styled.div`
     display: flex;
     gap: 20px;
-    padding: 50px 0;
-    justify-content: center;
+    margin: 0 10% 40px;
 
     article {
         display: flex;
@@ -128,30 +132,32 @@ export const StyledServicosCards = styled.div`
         gap: 10px;
 
         img {
-            width: 300px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 5px;
+            border-radius: 8px;
+            filter: hue-rotate(-5deg) brightness(0.5);
+        }
+
+        img:hover {
+            cursor: pointer;
+            filter: hue-rotate(-5deg) brightness(0.8);
+            transition: 0.5s;
         }
 
         .card-texto {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
+            text-align: center;
+            margin: 15px 0;
+            color: #0f5a6c;
 
             h3 {
                 font-size: 1.5rem;
                 font-weight: 700;
-                color: #000000;
+                color: #0f5a6c;
             }
 
             span {
                 font-size: 1rem;
                 font-weight: 400;
-                color: #000000;
+                color: #0f5a6c;
             }
         }
     }
 `;
-
-// Sessão de serviços

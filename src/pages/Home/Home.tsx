@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Footer } from "../../components/Footer/Footer";
 import { Navbar } from "../../components/Navbar/Navbar";
-import { Link, useLocation } from "react-router-dom";
 import imgServico1 from "../../assets/images/imagem-servico1.jpg";
 import imgServico2 from "../../assets/images/imagem-servico2.jpg";
 import imgServico3 from "../../assets/images/imagem-servico3.jpg";
