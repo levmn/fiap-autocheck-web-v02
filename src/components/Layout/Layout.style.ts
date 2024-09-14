@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledLayout = styled.div`
+    min-height: calc(100vh - 250px);
 
     @media (max-width: 575px) {
         width: 80vw;

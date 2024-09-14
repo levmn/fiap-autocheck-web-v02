@@ -50,7 +50,7 @@ export default function Login() {
 
             <Layout>
                 <Link to={"/"}>
-                    <IoIosArrowBack size={60} color="black" />
+                    <IoIosArrowBack size={40} color="black" />
                 </Link>
 
                 <StyledTitle>Acessar Conta</StyledTitle>

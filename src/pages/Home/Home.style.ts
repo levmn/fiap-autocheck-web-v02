@@ -221,3 +221,97 @@ export const StyledIntegrantesCards = styled.div`
         }
     }
 `;
+
+// Sessão de contato
+export const StyledContato = styled.section`
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 0;
+    background-color: #FFFFFF;
+
+    h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #0f5a6c;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    p {
+        width: 80vw;
+        font-size: 1.2rem;
+        color: #0f5a6c;
+        text-align: center;
+    }
+`;
+
+export const StyledContatos = styled.div`
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 1rem;
+        color: #0f5a6c;
+        margin: 10px 0 0 5px;
+        gap: 10px;
+        width: 100%;
+`;
+
+export const StyledContainerContato = styled.div`
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+`;
+
+export const StyledForm = styled.form`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30vw;
+
+    #nome,
+    #email,
+    #assunto {
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+        margin: 0 0 15px 0;
+        padding: 10px 10px;
+        border: 1px solid #0f5a6c;
+        border-radius: 8px;
+    }
+
+    #mensagem {
+        height: 210px;
+        font-family: "Rubik", Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+        margin: 0 0 15px 0;
+        padding: 10px 10px;
+        border: 1px solid #0f5a6c;
+        border-radius: 8px;
+    }
+`;
+
+export const StyledButtonContato = styled.a`
+    background-size: contain;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    align-self: flex-end;
+`;
+
+export const StyledInfo = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: min-content;
+
+    iframe {
+        width: 25vw;
+        border: 1px solid #0f5a6c;
+        border-radius: 8px;
+    }
+`;

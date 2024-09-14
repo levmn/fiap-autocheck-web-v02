@@ -2,14 +2,16 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Footer } from "../../components/Footer/Footer";
 import { Navbar } from "../../components/Navbar/Navbar";
+import { FaGithub } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { IoSend } from "react-icons/io5";
 import imgServico1 from "../../assets/images/imagem-servico1.jpg";
 import imgServico2 from "../../assets/images/imagem-servico2.jpg";
 import imgServico3 from "../../assets/images/imagem-servico3.jpg";
 import fotoAllan from "../../assets/images/allan.png";
 import fotoCaio from "../../assets/images/caio.png";
 import fotoLevi from "../../assets/images/levi.png";
-import { StyledButton, StyledButtonAdquirirServico, StyledButtonSaibaMais, StyledContainer, StyledHome, StyledIntegrantes, StyledIntegrantesCards, StyledServicos, StyledServicosCards } from "./Home.style";
-import { FaGithub } from "react-icons/fa";
+import { StyledButton, StyledButtonAdquirirServico, StyledButtonContato, StyledButtonSaibaMais, StyledContainer, StyledContainerContato, StyledContato, StyledContatos, StyledForm, StyledHome, StyledInfo, StyledIntegrantes, StyledIntegrantesCards, StyledServicos, StyledServicosCards } from "./Home.style";
 
 export default function Home() {
 
@@ -107,6 +109,41 @@ export default function Home() {
           </article>
         </StyledIntegrantesCards>
       </StyledIntegrantes>
+
+      <StyledContato>
+        <h2>Fale Conosco!</h2>
+        <p>Entre em contato conosco para tirar dúvidas, dar sugestões ou solicitar um orçamento.</p>
+
+        <StyledContainerContato id="fale-conosco">
+          <StyledInfo>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.1159349301374!2d-46.657424174484454!3d-23.56427930685303!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c7dc4e1e39%3A0x9cfd59970ac3b457!2sAv.%20Paulista%2C%201106%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-914!5e0!3m2!1sen!2sbr!4v1716230946303!5m2!1sen!2sbr"
+              width="400" height="300" style={{ border: "0" }} allowFullScreen loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade">
+            </iframe>
+
+            <StyledContatos>
+              <span>
+                <FaLocationDot size="20px" color="#0f5a6c" />
+                Av. Paulista, 1106 - 7º Andar - Bela Vista, São Paulo - SP, 01311-000
+              </span>
+              <span>Telefone: (11) 4002-8922</span>
+              <span>E-Mail: autocheckcontato@fiap.com.br</span>
+            </StyledContatos>
+          </StyledInfo>
+
+          <StyledForm action="" method="post" className="formulario">
+            <input type="text" name="nome" id="nome" placeholder="Nome" />
+            <input type="email" name="email" id="email" placeholder="E-mail" />
+            <input type="assunto" name="assunto" id="assunto" placeholder="Assunto" />
+            <textarea name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
+
+            <StyledButtonContato>
+              <IoSend size="25px" color="#0f5a6c" />
+            </StyledButtonContato>
+          </StyledForm>
+        </StyledContainerContato>
+      </StyledContato>
 
       <Footer />
     </>

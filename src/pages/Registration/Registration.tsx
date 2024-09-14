@@ -12,7 +12,7 @@ export default function Registration() {
 
             <Layout>
                 <Link to={"/"}>
-                    <IoIosArrowBack size={60} color="black" />
+                    <IoIosArrowBack size={40} color="black" />
                 </Link>
 
             <StyledTitle>Cadastrar Conta</StyledTitle>
