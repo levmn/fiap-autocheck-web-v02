@@ -15,6 +15,7 @@ function App() {
           <Route path="/login" element={<LazyLogin />} />
           <Route path="/cadastro" element={<LazyRegistration />} />
           <Route path="/cadastro-veiculo" element={<LazyVehicleRegistration />} />
+        
         </Routes>
       </Suspense>
     </BrowserRouter>
