@@ -89,7 +89,7 @@ export const GlobalStyles = createGlobalStyle`
   h4,
   h5,
   h6 {
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     font-weight: 700;
   }
   h1 {
