@@ -53,11 +53,73 @@ export const StyledContainer = styled.div`
         width: 350px;
         color: #FFFFFF;
     }
+
+    // Media Queries
+    @media (max-width: 575px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+
+        h1 {
+            font-size: 2.3rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            width: 80vw;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        gap: 15px;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            width: 80vw;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
+    }
 `;
 
 export const StyledButton = styled.div`
     display: flex;
     gap: 20px;
+
+    // Media Queries
+    @media (max-width: 575px) {
+        gap: 10px;
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
+    }
 `;
 
 export const StyledButtonSaibaMais = styled.button`
@@ -75,6 +137,31 @@ export const StyledButtonSaibaMais = styled.button`
         background-color: #138ccd;
         transition: 0.5s;
     }
+
+    // Media Queries
+    @media (max-width: 575px) {
+        width: 130px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        width: 140px;
+        height: 43px;
+        font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin-right: 10px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
+    }
 `;
 
 export const StyledButtonAdquirirServico = styled.button`
@@ -91,6 +178,31 @@ export const StyledButtonAdquirirServico = styled.button`
     &:hover {
         background-color: #EFEFEF;
         transition: 0.5s;
+    }
+
+    // Media Queries
+    @media (max-width: 575px) {
+        width: 140px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        width: 150px;
+        height: 43px;
+        font-size: 0.9rem;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        margin-left: 10px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
     }
 `;
 
@@ -118,6 +230,59 @@ export const StyledServicos = styled.section`
         font-weight: 400;
         color: #0f5a6c;
         text-align: center;
+    }
+
+    // Media Queries
+    @media (max-width: 575px) {
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            width: 80vw;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            width: 80vw;
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            width: 80vw;
+            font-size: 1.1rem;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            width: 80vw;
+            font-size: 1rem;
+        }
+    }
+
+    @media (min-width: 1200px) {
+
     }
 `;
 
@@ -160,6 +325,75 @@ export const StyledServicosCards = styled.div`
             }
         }
     }
+
+    // Media Queries
+    @media (max-width: 575px) {
+        flex-direction: column;
+
+        article {
+            img {
+                height: 28vh;
+            }
+
+            .card-texto {
+                h3 {
+                    font-size: 1.3rem;
+                }
+
+                span {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        flex-direction: column;
+
+        article {
+            img {
+                height: 28vh;
+            }
+
+            .card-texto {
+                h3 {
+                    font-size: 1.3rem;
+                }
+
+                span {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column;
+
+        article {
+            img {
+                height: 28vh;
+            }
+
+            .card-texto {
+                h3 {
+                    font-size: 1.3rem;
+                }
+
+                span {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
+    }
 `;
 
 // Sessão de integrantes
@@ -186,6 +420,27 @@ export const StyledIntegrantes = styled.section`
         font-weight: 400;
         color: #0f5a6c;
         text-align: center;
+    }
+
+    // Media Queries
+    @media (max-width: 575px) {
+
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
     }
 `;
 
@@ -220,6 +475,72 @@ export const StyledIntegrantesCards = styled.div`
             color: #0f5a6c;
         }
     }
+
+    // Media Queries
+    @media (max-width: 575px) {
+        flex-direction: column;
+        justify-content: center;
+
+        article {
+            img {
+                width: 200px;
+                height: 200px;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            span {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        flex-direction: column;
+        justify-content: center;
+
+        article {
+            img {
+                width: 200px;
+                height: 200px;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            span {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        article {
+            img {
+                width: 200px;
+                height: 200px;
+            }
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            span {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
+    }
 `;
 
 // Sessão de contato
@@ -246,6 +567,63 @@ export const StyledContato = styled.section`
         color: #0f5a6c;
         text-align: center;
     }
+
+    // Media Queries
+    @media (max-width: 575px) {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            width: 80vw;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1rem;
+            width: 80vw;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        width: 100vw;
+        display: flex;
+        align-items: center;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.1rem;
+            width: 80vw;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
+    }
 `;
 
 export const StyledContatos = styled.div`
@@ -257,14 +635,62 @@ export const StyledContatos = styled.div`
         margin: 10px 0 0 5px;
         gap: 10px;
         width: 100%;
+
+    // Media Queries
+    @media (max-width: 575px) {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+        align-items: left;
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+        align-items: left;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
+    }
 `;
 
 export const StyledContainerContato = styled.div`
-        width: 100vw;
         display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 30px;
+
+    // Media Queries
+    @media (max-width: 575px) {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
+    }
 `;
 
 export const StyledForm = styled.form`
@@ -293,6 +719,66 @@ export const StyledForm = styled.form`
         border: 1px solid #0f5a6c;
         border-radius: 8px;
     }
+
+    // Media Queries
+    @media (max-width: 575px) {
+        width: 80vw;
+        margin: 0 auto;
+
+        #nome,
+        #email,
+        #assunto {
+            font-size: 0.7rem;
+            padding: 8px 8px;
+        }
+
+        #mensagem {
+            font-size: 0.7rem;
+            padding: 8px 8px;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        width: 80vw;
+        margin: 0 auto;
+
+        #nome,
+        #email,
+        #assunto {
+            font-size: 0.8rem;
+            padding: 8px 8px;
+        }
+
+        #mensagem {
+            font-size: 0.8rem;
+            padding: 8px 8px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        width: 80vw;
+        margin: 0 auto;
+
+        #nome,
+        #email,
+        #assunto {
+            font-size: 0.9rem;
+            padding: 8px 8px;
+        }
+
+        #mensagem {
+            font-size: 0.9rem;
+            padding: 8px 8px;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
+    }
 `;
 
 export const StyledButtonContato = styled.a`
@@ -310,8 +796,35 @@ export const StyledInfo = styled.div`
     max-width: min-content;
 
     iframe {
-        width: 25vw;
+        width: 40vw;
         border: 1px solid #0f5a6c;
         border-radius: 8px;
+    }
+
+    // Media Queries
+    @media (max-width: 575px) {
+        iframe {
+            width: 80vw;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767px) {
+        iframe {
+            width: 80vw;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991px) {
+        iframe {
+            width: 80vw;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+
+    }
+
+    @media (min-width: 1200px) {
+
     }
 `;

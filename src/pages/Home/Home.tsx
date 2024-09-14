@@ -145,6 +145,7 @@ export default function Home() {
         </StyledContainerContato>
       </StyledContato>
 
+
       <Footer />
     </>
   );
