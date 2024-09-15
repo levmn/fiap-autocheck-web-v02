@@ -9,6 +9,7 @@ import { TiFlashOutline } from "react-icons/ti";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RiLightbulbFlashFill } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
+import { Button } from "../../components/Button/Button";
 import {
     StyledForm,
     StyledSubTitle,
@@ -32,7 +33,6 @@ export default function GenerateDiagnosis() {
         console.log(`Botão ${type} clicado`);
     };
 
-
     return (
         <>
             <Navbar type="logged" />
@@ -43,25 +43,26 @@ export default function GenerateDiagnosis() {
 
                 <StyledTitle>Gerar Diagnóstico</StyledTitle>
                 <StyledSubTitle>Hyundai HB20 Sedan - 2013</StyledSubTitle>
+                    <StyledDiv>
+                        <StyledForm action="" method="post" className="formulario">
+                            <input
+                                type="text"
+                                name="busca-codigo-falha"
+                                id="busca-codigo-falha"
+                                placeholder="Busque pelo código de falha"
+                                value={searchQuery}
+                                onChange={handleSearchChange}
+                                />
+                            <Link to={"/"}>
+                                <IoIosSearch
+                                    size={40}
+                                    color="black"
+                                    />
+                            </Link>
+                        </StyledForm>
+                    </StyledDiv>
 
-                <StyledDiv>
-                    <StyledForm action="" method="post" className="formulario">
-                        <input
-                            type="text"
-                            name="busca-codigo-falha"
-                            id="busca-codigo-falha"
-                            placeholder="Busque pelo código de falha"
-                            value={searchQuery}
-                            onChange={handleSearchChange}
-                        />
-                    </StyledForm>
-                    <IoIosSearch
-                        size={40}
-                        color="black"
-                    />
-                </StyledDiv>
-
-                <StyledDescription id="sem-codigo-falha" className="descricao-pagina">
+                <StyledDescription>
                     Não tem o código de falha? Busque por alternativas abaixo.
                 </StyledDescription>
 

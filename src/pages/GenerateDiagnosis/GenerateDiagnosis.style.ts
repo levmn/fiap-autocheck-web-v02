@@ -11,23 +11,12 @@ export const StyledSubTitle = styled.p`
     margin-bottom: 40px;
     `;
 
-export const StyledDiv = styled.div`
-    display: flex;
-    /* justify-content: space-between; */
-    /* margin: 0 auto;
-    padding-top: 10px; */
-    align-items: center;
-    margin-bottom: 9%;
-    `;
-
 export const StyledDivButton = styled.div`
     display: flex;
     padding-left: 1.6%;
     align-items: center;
     width: 100%;
-    & svg {
-        padding: 1px 10px 1px 1px;
-    }
+
 `;
 
 export const StyledDescription = styled.p`
@@ -86,6 +75,7 @@ export const StyledForm = styled.form`
     & div {
     display: flex;
     justify-content: end;
+    
     }
 
     & .button-enviar {
@@ -99,5 +89,21 @@ export const StyledForm = styled.form`
     font-size: 1rem;
     font-weight: 700;
     color: #000000;
+    
     }
+     
 `;
+export const StyledDiv = styled.div`
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end;
+    
+    &  svg {
+    margin: auto 0;
+    border-radius: 8px;
+    border: 2px solid #0f5a6c;
+    background-color: #3AC0E1;
+    position: absolute;
+
+    }
+    `;
