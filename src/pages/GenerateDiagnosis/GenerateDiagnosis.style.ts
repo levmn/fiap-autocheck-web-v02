@@ -11,6 +11,19 @@ export const StyledSubTitle = styled.p`
     margin-bottom: 40px;
 `;
 
+export const StyledDiv = styled.div`
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    padding-top: 10px;
+`;
+
+export const StyledSectionButton = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
 export const StyledForm = styled.form`
     & input {
     width: 100%;
