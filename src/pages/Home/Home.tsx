@@ -11,7 +11,7 @@ import imgServico3 from "../../assets/images/imagem-servico3.jpg";
 import fotoAllan from "../../assets/images/allan.png";
 import fotoCaio from "../../assets/images/caio.png";
 import fotoLevi from "../../assets/images/levi.png";
-import { StyledButton, StyledButtonAdquirirServico, StyledButtonContato, StyledButtonSaibaMais, StyledContainer, StyledContainerContato, StyledContato, StyledContatos, StyledForm, StyledHome, StyledInfo, StyledIntegrantes, StyledIntegrantesCards, StyledServicos, StyledServicosCards } from "./Home.style";
+import { StyledButtonContato, StyledContainer, StyledContainerContato, StyledContato, StyledContatos, StyledForm, StyledHome, StyledInfo, StyledIntegrantes, StyledIntegrantesCards, StyledServicos, StyledServicosCards } from "./Home.style";
 
 export default function Home() {
 
@@ -35,14 +35,14 @@ export default function Home() {
           <h1>Seja</h1>
           <h1>Bem-Vindo</h1>
           <p>Conheça <b>AutoCheck</b>, o seu novo mecânico de bolso!</p>
-          <StyledButton>
+          {/* <StyledButton>
             <Link to="#saiba-mais">
               <StyledButtonSaibaMais>Saiba Mais</StyledButtonSaibaMais>
             </Link>
             <Link to="/cadastrar">
               <StyledButtonAdquirirServico>Adquirir Serviço</StyledButtonAdquirirServico>
             </Link>
-          </StyledButton>
+          </StyledButton> */}
         </StyledContainer>
       </StyledHome>
 

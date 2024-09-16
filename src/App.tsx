@@ -6,6 +6,7 @@ const LazyLogin = lazy(() => import('./pages/Login/Login'))
 const LazyRegistration = lazy(() => import('./pages/Registration/Registration'))
 const LazyVehicleRegistration = lazy(() => import('./pages/VehicleRegistration/VehicleRegistration'))
 const LazyGenerateDiagnosis = lazy(() => import('./pages/GenerateDiagnosis/GenerateDiagnosis'))
+const LazyDiagnosisHistory = lazy(() => import('./pages/DiagnosisHistory/DiagnosisHistory'))
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/cadastrar" element={<LazyRegistration />} />
           <Route path="/cadastrar-veiculo" element={<LazyVehicleRegistration />} />
           <Route path="/diagnosticar" element={<LazyGenerateDiagnosis />} />
+          <Route path="/historico" element={<LazyDiagnosisHistory />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
