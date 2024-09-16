@@ -5,16 +5,17 @@ import { StyledForm, StyledRegister, StyledSubTitle, StyledTitle } from "./Login
 import { IoIosArrowBack } from "react-icons/io";
 import { Layout } from "../../components/Layout/Layout";
 import { Button } from "../../components/Button/Button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 export default function Login() {
-
     const navigate = useNavigate();
 
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
-    const [logged, setLogged] = useState<boolean>(false)
+    const [logged, setLogged] = useState<boolean>(() => {
+        return localStorage.getItem('logged') === 'true';
+    });
 
     const validarEmailOuCPF = (input: string): boolean => {
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -41,12 +42,18 @@ export default function Login() {
         setUsername('')
         setPassword('')
         setLogged(true)
-        navigate('/', { state: { logged: true } })
+        localStorage.setItem('logged', 'true');
     }
+
+    useEffect(() => {
+        if (logged) {
+            navigate('/', { state: { logged: true } });
+        }
+    }, [logged, navigate]);
 
     return (
         <>
-            <Navbar type="logged" />
+            <Navbar type="unlogged" />
 
             <Layout>
                 <Link to={"/"}>

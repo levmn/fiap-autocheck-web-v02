@@ -15,6 +15,8 @@ export default function VehicleRegistration() {
     const [vehicleManufacturer, setVehicleManufacturer] = useState('')
     const [vehicle, setVehicle] = useState('')
     const [engine, setEngine] = useState('')
+    const [registered, setRegistered] = useState<boolean>(() => {
+        return localStorage.getItem('logged') === 'true'})
 
     const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
@@ -23,25 +25,27 @@ export default function VehicleRegistration() {
         if (isNaN(yearNumber) || yearNumber < 1886 || yearNumber > new Date().getFullYear()) {
             alert('Por favor, insira um ano válido!');
             return;
-        }
+        };
 
         if (!vehicleManufacturer.trim()) {
             alert('Por favor, insira uma montadora válida!');
             return;
-        }
+        };
 
         if (!vehicle.trim()) {
             alert('Por favor, insira um veículo válido!');
             return;
-        }
+        };
 
         if (!engine.trim()) {
             alert('Por favor, insira um motor válido!');
             return;
-        }
+        };
 
-        alert('Cadastro de veículo realizado com sucesso!');
-        navigate('/')
+        alert('Cadastro de veículo realizado com sucesso!');;
+        localStorage.setItem('vehicleRegistered', 'true');
+        setRegistered(true);
+        navigate('/', { state: { registered: true } });
     };
 
     return (

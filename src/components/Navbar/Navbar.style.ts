@@ -70,9 +70,9 @@ export const StyledList = styled.ul`
 
 export const StyledListItem = styled.li`
     list-style: none;
-    display: inline-block;
+    display: flex;
+    gap: 15%;
     font-size: 1.2rem;
-    flex-grow: 1;
     color: #0f5a6c;
 
     & a {

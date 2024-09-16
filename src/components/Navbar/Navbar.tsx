@@ -17,13 +17,30 @@ export const Navbar = ({ type }: NavbarProps) => {
 
                 <StyledList>
                     <StyledListItem>
-                        <Link to="https://www.portoseguro.com.br/centros-automotivos-porto-seguro" target="_blank">
-                            Parceria Porto
-                        </Link>
+                        {type === 'unlogged'
+                        ?
+                        (
+                            <Link to="https://www.portoseguro.com.br/centros-automotivos-porto-seguro" target="_blank">
+                                Parceria Porto
+                            </Link>
+                        )
+                        :
+                        (
+                            <>
+                            <Link to="https://www.portoseguro.com.br/centros-automotivos-porto-seguro" target="_blank">
+                                Parceria Porto
+                            </Link>
+                            
+                            <Link to="/diagnosticar">
+                                Gerar diagnóstico
+                            </Link>
+                            </>
+                        )
+                        }
                     </StyledListItem>
                 </StyledList>
             </StyledDiv>
-            {type === 'deslogado'
+            {type === 'unlogged'
                 ?
                 (
                     <Link to={"/login"}>

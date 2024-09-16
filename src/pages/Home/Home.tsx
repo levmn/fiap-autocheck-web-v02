@@ -15,16 +15,16 @@ import { StyledButton, StyledButtonAdquirirServico, StyledButtonContato, StyledB
 
 export default function Home() {
 
-  const location = useLocation();
-  const { logged } = location.state || { logged: false };
-
-  const [typeNavbar, setTypeNavbar] = useState('deslogado');
+  const [typeNavbar, setTypeNavbar] = useState('unlogged');
 
   useEffect(() => {
+    const logged = localStorage.getItem('logged') === 'true';
     if (logged) {
       setTypeNavbar('logged');
+    }else {
+      setTypeNavbar('unlogged');
     }
-  }, [logged]);
+  }, []);
 
   return (
     <>

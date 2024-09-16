@@ -4,11 +4,10 @@ import { Layout } from "../../components/Layout/Layout";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { IoIosArrowBack } from "react-icons/io";
 import { StyledForm, StyledSubTitle, StyledTitle } from "./Registration.style";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../../components/Button/Button";
 
 export default function Registration() {
-
     const navigate = useNavigate();
 
     const [email, setEmail] = useState('')
@@ -16,6 +15,14 @@ export default function Registration() {
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
 
+    useEffect(() => {
+        const logged = localStorage.getItem('logged') === 'true';
+        console.log('Estado de logged:', logged);
+        if (logged) {
+            alert('Usuário logado')
+            navigate('/', { state: { logged: true }})
+        }
+        }, [navigate])
 
     const validarEmail = (input: string): boolean => {
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -58,13 +65,14 @@ export default function Registration() {
             return;
         }
 
-        alert('Cadastro realizado com sucesso! Agora efetue login para continuar.');
-        navigate('/login')
+        alert('Cadastro realizado com sucesso! Agora cadastre um veículo.');
+        localStorage.setItem('logged', 'true');
+        navigate('/cadastrar-veiculo')
     }
 
     return (
         <>
-            <Navbar type="logged" />
+            <Navbar type="unlogged" />
 
             <Layout>
                 <Link to={"/"}>
@@ -81,14 +89,14 @@ export default function Registration() {
                         placeholder="Nome completo"
                     />
 
-                    <input 
+                    <input
                         type="text"
                         name="cpf"
                         placeholder="CPF"
                         onChange={(e) => setCPF(e.target.value)}
                     />
 
-                    <input 
+                    <input
                         type="text"
                         name="email"
                         placeholder="E-mail"
@@ -121,4 +129,5 @@ export default function Registration() {
             <Footer />
         </>
     )
+
 }
