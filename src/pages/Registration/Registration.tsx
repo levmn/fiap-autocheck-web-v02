@@ -78,14 +78,12 @@ export default function Registration() {
                     <input
                         type="text"
                         name="nome"
-                        id="nome"
                         placeholder="Nome completo"
                     />
 
                     <input 
                         type="text"
                         name="cpf"
-                        id="cpf"
                         placeholder="CPF"
                         onChange={(e) => setCPF(e.target.value)}
                     />
@@ -93,7 +91,6 @@ export default function Registration() {
                     <input 
                         type="text"
                         name="email"
-                        id="email"
                         placeholder="E-mail"
                         onChange={(e) => setEmail(e.target.value)}
                     />
@@ -101,7 +98,6 @@ export default function Registration() {
                     <input
                         type="password"
                         name="senha"
-                        id="senha"
                         placeholder="Senha"
                         onChange={(e) => setPassword(e.target.value)}
                     />
@@ -109,7 +105,6 @@ export default function Registration() {
                     <input
                         type="password"
                         name="confirmar-senha"
-                        id="confirmar-senha"
                         placeholder="Confirmar senha"
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
