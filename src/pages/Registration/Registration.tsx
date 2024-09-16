@@ -1,34 +1,125 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Footer } from "../../components/Footer/Footer";
 import { Layout } from "../../components/Layout/Layout";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { IoIosArrowBack } from "react-icons/io";
 import { StyledForm, StyledSubTitle, StyledTitle } from "./Registration.style";
+import { useState } from "react";
+import { Button } from "../../components/Button/Button";
 
 export default function Registration() {
+
+    const navigate = useNavigate();
+
+    const [email, setEmail] = useState('')
+    const [CPF, setCPF] = useState('')
+    const [password, setPassword] = useState('')
+    const [confirmPassword, setConfirmPassword] = useState('')
+
+
+    const validarEmail = (input: string): boolean => {
+        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regexEmail.test(input);
+    };
+
+    const validarCPF = (input: string): boolean => {
+        const regexCPF = /^\d{3}\.?\d{3}\.?\d{3}-?\d{2}$/;
+        return regexCPF.test(input);
+    }
+
+    const validarSenha = (senha: string): boolean => {
+        return senha.length >= 8;
+    };
+
+    const confirmaSenha = (senha: string, confirmarSenha: string): boolean => {
+        return senha === confirmarSenha;
+    }
+
+    const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+
+        if (!validarEmail(email)) {
+            alert('Por favor, insira um e-mail válido!')
+            return;
+        }
+
+        if (!validarCPF(CPF)) {
+            alert('Por favor, insira um CPF válido!')
+            return;
+        }
+
+        if (!validarSenha(password)) {
+            alert('A senha deve ter no mínimo 8 caracteres!')
+            return;
+        }
+
+        if (!confirmaSenha(password, confirmPassword)) {
+            alert('As senhas não coincidem!')
+            return;
+        }
+
+        alert('Cadastro realizado com sucesso! Agora efetue login para continuar.');
+        navigate('/login')
+    }
+
     return (
         <>
             <Navbar type="logged" />
 
             <Layout>
-                <Link to={"/login"}>
+                <Link to={"/"}>
                     <IoIosArrowBack size={40} color="black" />
                 </Link>
 
                 <StyledTitle>Cadastrar Conta</StyledTitle>
                 <StyledSubTitle>Preencha seus dados para continuar</StyledSubTitle>
 
-                <StyledForm action="" method="post">
-                    <input type="text" name="nome" id="nome" placeholder="Nome completo" />
-                    <input type="text" name="cpf" id="cpf" placeholder="CPF" />
-                    <input type="text" name="email" id="email" placeholder="E-mail" />
-                    <input type="password" name="senha" id="senha" placeholder="Senha" />
-                    <input type="password" name="confirmar-senha" id="confirmar-senha" placeholder="Confirmar senha" />
+                <StyledForm action="" method="post" onSubmit={(e) => e.preventDefault()}>
+                    <input
+                        type="text"
+                        name="nome"
+                        id="nome"
+                        placeholder="Nome completo"
+                    />
+
+                    <input 
+                        type="text"
+                        name="cpf"
+                        id="cpf"
+                        placeholder="CPF"
+                        onChange={(e) => setCPF(e.target.value)}
+                    />
+
+                    <input 
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="E-mail"
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+
+                    <input
+                        type="password"
+                        name="senha"
+                        id="senha"
+                        placeholder="Senha"
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+
+                    <input
+                        type="password"
+                        name="confirmar-senha"
+                        id="confirmar-senha"
+                        placeholder="Confirmar senha"
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                    />
+
                     <div>
-                        <button type="submit" className="button-enviar">
-                            <Link to="/cadastrar-veiculo">Cadastrar</Link>
-                        </button>
+                        <Button type="submit" onClick={handleClick}>
+                            Cadastrar
+                        </Button>
                     </div>
+
                 </StyledForm>
             </Layout>
 

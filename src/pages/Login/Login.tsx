@@ -37,7 +37,7 @@ export default function Login() {
             return;
         }
 
-        console.log("Login bem-sucedido!");
+        alert("Login bem-sucedido!");
         setUsername('')
         setPassword('')
         setLogged(true)
@@ -84,7 +84,7 @@ export default function Login() {
 
                 <StyledRegister>
                     <p>Não tem uma conta na AutoCheck?</p>
-                    <Link to={"/cadastrar"}>Crie seu cadastro!</Link>
+                    <Link to="/cadastrar">Crie seu cadastro!</Link>
                 </StyledRegister>
             </Layout>
 
