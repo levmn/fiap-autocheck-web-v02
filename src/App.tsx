@@ -14,9 +14,9 @@ function App() {
         <Routes>
           <Route path="/" element={<LazyHome />} />
           <Route path="/login" element={<LazyLogin />} />
-          <Route path="/cadastro" element={<LazyRegistration />} />
-          <Route path="/cadastro-veiculo" element={<LazyVehicleRegistration />} />
-          <Route path="/gerar-diagnostico" element={<LazyGenerateDiagnosis />} />
+          <Route path="/cadastrar" element={<LazyRegistration />} />
+          <Route path="/cadastrar-veiculo" element={<LazyVehicleRegistration />} />
+          <Route path="/diagnosticar" element={<LazyGenerateDiagnosis />} />
         </Routes>
       </Suspense>
     </BrowserRouter>

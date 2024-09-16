@@ -11,8 +11,8 @@ export default function VehicleRegistration() {
             <Navbar type="logged" />
 
             <Layout>
-                <Link to={"/"}>
-                    <IoIosArrowBack size={60} color="black" />
+                <Link to={"/cadastrar"}>
+                    <IoIosArrowBack size={40} color="black" />
                 </Link>
 
                 <StyledTitle>Cadastrar Veículo</StyledTitle>
@@ -25,7 +25,7 @@ export default function VehicleRegistration() {
                     <input type="text" name="motor" id="motor" placeholder="Motor" />
                     <div>
                         <button type="submit" className="button-enviar">
-                            <a href="">Cadastrar</a>
+                            <Link to="/diagnosticar">Cadastrar</Link>
                         </button>
                     </div>
                 </StyledForm>

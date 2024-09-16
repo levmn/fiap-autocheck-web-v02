@@ -11,23 +11,25 @@ export default function Registration() {
             <Navbar type="logged" />
 
             <Layout>
-                <Link to={"/"}>
+                <Link to={"/login"}>
                     <IoIosArrowBack size={40} color="black" />
                 </Link>
 
-            <StyledTitle>Cadastrar Conta</StyledTitle>
-            <StyledSubTitle>Preencha seus dados para continuar</StyledSubTitle>
+                <StyledTitle>Cadastrar Conta</StyledTitle>
+                <StyledSubTitle>Preencha seus dados para continuar</StyledSubTitle>
 
-            <StyledForm action="" method="post">
-                <input type="text" name="nome" id="nome" placeholder="Nome completo" />
-                <input type="text" name="cpf" id="cpf" placeholder="CPF" />
-                <input type="text" name="email" id="email" placeholder="E-mail" />
-                <input type="password" name="senha" id="senha" placeholder="Senha" />
-                <input type="password" name="confirmar-senha" id="confirmar-senha" placeholder="Confirmar senha" />
-                <div>
-                    <button type="submit" className="button-enviar"><a href="">Cadastrar</a></button>
-                </div>
-            </StyledForm>
+                <StyledForm action="" method="post">
+                    <input type="text" name="nome" id="nome" placeholder="Nome completo" />
+                    <input type="text" name="cpf" id="cpf" placeholder="CPF" />
+                    <input type="text" name="email" id="email" placeholder="E-mail" />
+                    <input type="password" name="senha" id="senha" placeholder="Senha" />
+                    <input type="password" name="confirmar-senha" id="confirmar-senha" placeholder="Confirmar senha" />
+                    <div>
+                        <button type="submit" className="button-enviar">
+                            <Link to="/cadastrar-veiculo">Cadastrar</Link>
+                        </button>
+                    </div>
+                </StyledForm>
             </Layout>
 
             <Footer />

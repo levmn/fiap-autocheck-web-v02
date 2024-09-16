@@ -39,7 +39,7 @@ export default function Home() {
             <Link to="#saiba-mais">
               <StyledButtonSaibaMais>Saiba Mais</StyledButtonSaibaMais>
             </Link>
-            <Link to="/cadastro">
+            <Link to="/cadastrar">
               <StyledButtonAdquirirServico>Adquirir Serviço</StyledButtonAdquirirServico>
             </Link>
           </StyledButton>

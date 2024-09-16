@@ -84,7 +84,7 @@ export default function Login() {
 
                 <StyledRegister>
                     <p>Não tem uma conta na AutoCheck?</p>
-                    <Link to={"/cadastro"}>Crie seu cadastro!</Link>
+                    <Link to={"/cadastrar"}>Crie seu cadastro!</Link>
                 </StyledRegister>
             </Layout>
 
